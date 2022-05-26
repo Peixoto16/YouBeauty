@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title style="color: rgb(255, 255, 255); font-weight: bolder;" class="ion-text-center">You Beauty</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+  <div>
+    <ion-slides [options]="categoriaSlides">
+    </ion-slides>
+  </div>
+
+  <ion-card color="primary" [routerLink]="['/produto']">
+    <ion-card-content class="ion-text-center">
+      <h1 style="font-weight: bolder;"> PRODUTOS </h1>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="primary" [routerLink]="['/']">
+    <ion-card-content class="ion-text-center">
+      <h1 style="font-weight: bolder;"> AGENDAR HORÁRIO </h1>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="primary" [routerLink]="['/']">
+    <ion-card-content class="ion-text-center">
+      <h1 style="font-weight: bolder;"> MEUS AGENDAMENTOS </h1>
+    </ion-card-content>
+  </ion-card>
+ 
+</ion-content>

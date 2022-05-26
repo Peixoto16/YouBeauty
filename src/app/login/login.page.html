@@ -1,0 +1,49 @@
+
+<ion-content color= "primary">
+
+  <div> <!-- DISTANCIA -->
+  
+    <div style="text-align: center;"> 
+      <h1 style="color: rgb(255, 255, 255); font-weight: bolder; margin-top: 7px;"> You Beauty </h1>
+      <img  [src]="localizacao" class="img">
+  
+    </div>
+
+    <form>
+  
+      <ion-card color="secondary">
+        <ion-card-header>
+          <ion-card-title style="font-size: x-large; text-align: center;"> Login </ion-card-title>
+        </ion-card-header>
+  
+        <ion-card-content>
+        
+          <ion-item style="margin-bottom: 7px; border-radius: 11px;">
+            <ion-label position="floating">E-mail:</ion-label>
+            <ion-input type="email" placeholder="Informe seu e-mail:"></ion-input>
+          </ion-item>
+    
+          <ion-item style="margin-bottom: 7px;border-radius: 11px;">
+            <ion-label position="floating">Senha:</ion-label>
+            <ion-input type="password" placeholder="Informe sua senha:"></ion-input>
+          </ion-item>
+  
+          <ion-button expand="block" color="warning" [routerLink]="['/home']">
+            Logar
+          </ion-button>
+    
+          <ion-button expand="block" color="success" [routerLink]="['/register']">
+            Registrar
+          </ion-button>
+  
+        </ion-card-content>
+  
+      </ion-card>
+  
+  
+    </form>
+  
+  
+  </div>
+  
+  </ion-content>

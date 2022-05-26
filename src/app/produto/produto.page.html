@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-icon size="10" slot="end" name="bag-add-outline" [routerLink]="['/home']" style="zoom:1.7;"></ion-icon>
+    <ion-title class="ion-text-center">
+      Produtos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card"
+    [routerLink]="['/produto-detalhes', obj.id]"  
+    *ngFor="let obj of produtos">
+    <ion-card-header class="titulo">
+      <ion-card-title>
+        {{ obj.nome }}
+      </ion-card-title>
+      <ion-card-subtitle>
+        {{ obj.id }}
+      </ion-card-subtitle>
+      <ion-img [src]="obj.foto" class="img" ></ion-img>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Valor: </ion-label>
+        <ion-input type="number" [ngModel]="obj.preco">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+       <ion-textarea class="descricao">
+         {{obj.descricao}}
+       </ion-textarea>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" [routerLink]="['/produto-novo']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
